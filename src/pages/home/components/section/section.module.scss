@@ -1,0 +1,88 @@
+@use "../../../../variables" as v;
+
+.sectionInitial {
+  padding-bottom: 4rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 4.375rem 1rem 6.25rem;
+    gap: 1.75rem;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  background-color: v.$background-badge;
+  border-radius: 2rem;
+  padding: 0.625rem 1.275rem;
+
+  width: fit-content;
+
+  img {
+    height: 33px;
+    aspect-ratio: 1/1;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 19rem;
+
+  & > * {
+    padding: 1rem 1.5rem !important;
+  }
+}
+
+@media (min-width: v.$breakpoint-laptop) {
+  .sectionInitial {
+    margin-inline: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    .content {
+      align-items: start;
+      text-align: start;
+      padding-top: 6rem;
+      width: 100%;
+      max-width: 35rem;
+    }
+
+    .banner {
+      height: 585px;
+      margin-top: 1rem;
+      width: 616px;
+      img {
+        width: 616px;
+        height: 585px;
+      }
+    }
+  }
+
+  .buttonList {
+    flex-direction: row;
+    text-align: center;
+    max-width: 30rem;
+
+    & > * {
+      padding: 0.75rem 1.5rem !important;
+    }
+  }
+}

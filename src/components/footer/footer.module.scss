@@ -1,0 +1,102 @@
+@use "../../variables" as v;
+
+footer {
+  background-color: #000;
+  color: white;
+  padding: 5rem 1rem 2rem;
+
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: white;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+footer {
+  section {
+    width: 60dvw;
+    margin-inline: auto;
+
+    h4 {
+      margin-top: 2rem;
+    }
+  }
+
+  .about {
+    div {
+      margin-bottom: 0.725rem;
+    }
+  }
+
+  .credits {
+    margin-top: 4rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: v.$breakpoint-tablet) {
+  footer {
+    padding-inline: 5%;
+    section {
+      width: 100%;
+      margin-inline: auto;
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .aboutAndContact {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    .contacts {
+      width: 60%;
+    }
+
+    .about {
+      div {
+        margin-bottom: 0.725rem;
+      }
+    }
+  }
+}
+
+@media (min-width: v.$breakpoint-laptop) {
+  footer {
+    section {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+
+      .aboutAndContact {
+        gap: 4rem;
+      }
+    }
+  }
+}

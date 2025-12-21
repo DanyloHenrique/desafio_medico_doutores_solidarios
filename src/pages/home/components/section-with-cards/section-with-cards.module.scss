@@ -1,0 +1,53 @@
+@use "../../../../variables" as v;
+
+.sectionWithCards {
+  text-align: center;
+  width: inherit;
+  padding: 3.875rem 1.625rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .listCards {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  //style for section mission
+  &Mission {
+    background-color: v.$color-primary;
+    color: #fff;
+
+    //style for .card
+    h3,
+    p {
+      color: #fff;
+    }
+
+    article {
+      border-color: #fff;
+
+      &:hover {
+        border-color: #84ffa3;
+      }
+    }
+  }
+}
+
+@media (min-width: v.$breakpoint-laptop) {
+  .sectionWithCards {
+    text-align: start;
+
+    .listCards {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
