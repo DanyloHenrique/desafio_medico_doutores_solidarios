@@ -1,0 +1,40 @@
+@use "../../variables" as v;
+
+header {
+  position: sticky;
+  width: inherit;
+
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #c7c7c7;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem !important;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: v.$breakpoint-laptop) {
+  header {
+    padding: 1rem 3rem;
+  }
+}
