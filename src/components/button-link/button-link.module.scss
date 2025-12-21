@@ -1,0 +1,39 @@
+@use "../../variables" as v;
+
+.link {
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 400;
+  font-style: normal;
+
+  &:hover {
+    color: v.$color-primary-hover;
+  }
+
+  &Primary {
+    font-weight: 600;
+    padding: 0.6rem 1.3rem;
+    background-color: v.$color-primary;
+    color: white;
+    transition: all 300ms;
+
+    &:hover {
+      background-color: v.$color-primary-hover;
+      color: white;
+    }
+  }
+
+  &Secondary {
+    padding: 0.6rem 1.3rem;
+    border: 1px solid v.$color-primary;
+    color: v.$color-primary;
+    transition: all 300ms;
+
+    &:hover {
+      border-color: v.$color-primary-hover;
+      color: v.$color-primary-hover;
+    }
+  }
+}
