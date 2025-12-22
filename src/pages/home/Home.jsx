@@ -1,8 +1,6 @@
 import React from "react";
 
 import Section from "./components/section/section";
-import SectionMission from "./components/section-mission/Section-mission";
-import SectionImpact from "./components/section-impact/Section-impact";
 import SectionWithCards from "./components/section-with-cards/Section-with-cards";
 
 const cardMissionArray = [
