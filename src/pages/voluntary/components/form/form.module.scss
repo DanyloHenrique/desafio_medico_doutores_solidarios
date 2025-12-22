@@ -1,0 +1,129 @@
+@use "../../../../variables" as v;
+
+.sectionForm {
+  background-color: v.$color-primary;
+
+  form {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem 2%;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 1.75rem;
+    }
+
+    .group {
+      text-align: start;
+      margin-bottom: 2rem;
+      // display: flex;
+
+      h4 {
+        margin-bottom: 1.25rem;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1.125rem;
+      }
+    }
+
+    button {
+      margin-top: 1.5rem;
+
+      padding: 1.25rem 2rem;
+      border-radius: 10px;
+      background-color: v.$color-primary;
+      color: #fff;
+
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 18px;
+
+      &:hover {
+        background-color: #015845;
+      }
+    }
+  }
+}
+
+.sectionForm {
+  form {
+    input,
+    textarea {
+      width: 100%;
+
+      border: 1px solid #000;
+      background-color: #f8f8f8;
+      padding: 0.75rem 0.5rem;
+
+      border-radius: 10px;
+
+      &:focus-visible {
+        border: none;
+        outline: 2px solid v.$color-primary;
+        outline-offset: 2px;
+      }
+
+      textarea {
+        resize: none;
+        height: 11.25rem;
+      }
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35rem;
+  span {
+    background-color: v.$color-primary;
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-inline: center;
+
+    font-size: 2rem;
+  }
+
+  h2 {
+    margin: 1rem 0 0.5rem !important;
+    line-height: 1.1;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: v.$breakpoint-tablet) {
+  .sectionForm {
+    form {
+      .group {
+        & > div {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  //   .sectionForm  {
+  //     padding: 6rem 10rem;
+  //   }
+}
+
+@media (min-width: v.$breakpoint-laptop) {
+  .sectionForm {
+    padding: 6rem 10dvw;
+  }
+}
