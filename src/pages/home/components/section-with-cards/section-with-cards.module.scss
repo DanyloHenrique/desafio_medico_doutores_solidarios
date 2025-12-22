@@ -28,11 +28,12 @@
     //style for .card
     h3,
     p {
-      color: #fff;
+      color: #fff !important;
     }
 
     article {
       border-color: #fff;
+
 
       &:hover {
         border-color: #84ffa3;
